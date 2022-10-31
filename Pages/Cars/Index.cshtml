@@ -1,0 +1,192 @@
+﻿@page
+@model CarSpecs.Pages.Cars.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].make)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].generation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].year_from)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].year_to)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].series)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].trim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].body_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].number_of_seats)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].length_in)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].width_in)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].height_in)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].curb_weight_lbs)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].full_weight_lbs)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].maximum_torque_ft_lbs)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].injection_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].cylinder_layout)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].number_of_cylinders)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].engine_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].max_power_hp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].number_of_gears)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].transmission)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].acceleration_0_60_m)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].max_speed_mph)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].city_fuel_mpg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].fuel_grade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].highway_fuel_mpg)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Car) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.make)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.generation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.year_from)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.year_to)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.series)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.trim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.body_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.number_of_seats)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.length_in)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.width_in)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.height_in)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.curb_weight_lbs)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.full_weight_lbs)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.maximum_torque_ft_lbs)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.injection_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cylinder_layout)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.number_of_cylinders)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.engine_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.max_power_hp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.number_of_gears)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.transmission)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.acceleration_0_60_m)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.max_speed_mph)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.city_fuel_mpg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fuel_grade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.highway_fuel_mpg)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
